@@ -1,3 +1,5 @@
+"use strict";
+
 var async = require('async'),
     fs = require('fs'),
     path = require('path'),
@@ -32,9 +34,10 @@ var getFiles = function (paths, callback) {
 
 var applyTransform = function (file, callback) {
     var mimeType = file.mimeType,
-        transform = null;
+        transform = null,
+        i;
 
-    for (var i = 0; i < this.transforms.length; i++) {
+    for (i = 0; i < this.transforms.length; i++) {
         if (this.transforms[i].mimeTypes.indexOf(mimeType) >= 0) {
             transform = this.transforms[i];
             break;

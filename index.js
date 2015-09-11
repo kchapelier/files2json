@@ -6,7 +6,7 @@ var transforms = require('./transforms'),
 var options = {
     relative: null,
     transforms: transforms,
-    glob : {
+    glob: {
         dot: false
     }
 };

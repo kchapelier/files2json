@@ -1,4 +1,10 @@
+"use strict";
+
 var csvParse = require('csv-parse');
+
+var csvOptions = {
+    trim: true
+};
 
 var transforms = [
     {
@@ -10,7 +16,7 @@ var transforms = [
     {
         mimeTypes: ['text/csv'],
         operation: function (content, callback) {
-            csvParse(content, { trim: true }, callback);
+            csvParse(content, csvOptions, callback);
         }
     }
 ];
