@@ -4,6 +4,10 @@ A simple cli tool to concat multiple files into a single json file.
 
 The json string is directly sent to the standard output.
 
+## Installation
+
+```npm i -g files2json```
+
 ## Usage
 
 ```files2json <glob pattern>```
