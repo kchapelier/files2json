@@ -1,5 +1,6 @@
 {
   "name": "files2json",
+  "homepage": "https://github.com/kchapelier/files2json",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +10,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "cli",
+    "json",
+    "concat",
+    "files"
+  ],
   "author": "Kevin Chapelier",
   "license": "MIT",
   "dependencies": {
@@ -17,4 +24,12 @@
     "glob": "^5.0.14",
     "mime": "^1.3.4"
   }
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kchapelier/files2json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kchapelier/files2json/issues"
+  },
+  "readmeFilename": "README.md"
 }
