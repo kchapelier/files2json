@@ -1,0 +1,20 @@
+{
+  "name": "files2json",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "files2json": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Chapelier",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.4.2",
+    "csv-parse": "^1.0.0",
+    "glob": "^5.0.14",
+    "mime": "^1.3.4"
+  }
+}
