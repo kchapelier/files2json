@@ -73,3 +73,9 @@ files2json "./fixtures/**/*"
  * All the files are treated as utf8 text files, except for the json and csv files.
  * The csv and json files are parsed before being added to the output.
  * Currently the csv parsing is hardcoded to use comma as separators and double quote as enclosures.
+
+## History
+
+### 0.1.0 (2015.09.11)
+
+ * First release
