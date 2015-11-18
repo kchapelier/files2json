@@ -11,7 +11,8 @@ var options = {
     }
 };
 
-module.exports = function (path, callback) {
+module.exports = function (path, relativePath, callback) {
+    options.relative = relativePath;
     workflow(path, options, callback);
 };
 

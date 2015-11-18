@@ -10,7 +10,11 @@ The json string is directly sent to the standard output.
 
 ## Usage
 
-```files2json <glob pattern>```
+```files2json glob-pattern [OPTIONS]...```
+
+### Options
+
+- **-r, --relative :** Specify the directory to use as relative path. By default it is the current working directory.
 
 ## Examples
 
@@ -68,6 +72,39 @@ files2json "./fixtures/**/*"
 }
 ```
 
+#### Command with relative path
+
+```
+files2json "./fixtures/**/*" -r ./fixtures/dirWithFiles
+```
+
+#### Output
+
+```json
+{
+    "csvFiles/test.csv": [
+        [
+            "column 1",
+            "column 2"
+        ],
+        [
+            "1",
+            "2"
+        ],
+        [
+            "3",
+            "4"
+        ]
+    ],
+    "jsonFiles/test.json": {
+        "name": "A test file",
+        "parameter1": 1,
+        "parameter2": 2
+    },
+    "test.txt": "A text file...\nHow surprising.\n"
+}
+```
+
 ## Notes
 
  * All the files are treated as utf8 text files, except for the json and csv files.
@@ -76,6 +113,11 @@ files2json "./fixtures/**/*"
 
 ## History
 
+### 0.2.0 (2015.11.18)
+
+ * Add the relative path option.
+ * Update dependencies.
+
 ### 0.1.0 (2015.09.11)
 
- * First release
+ * First release.

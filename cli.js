@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 
 var file2Json = require('./index'),
-    srcPath = process.argv[2];
+    arguments = require('minimist')(process.argv.slice(2));
 
-file2Json(srcPath, function (error, json) {
+var srcPath = arguments._[0] || null,
+    relativePath = arguments.relative || arguments.r || null;
+
+file2Json(srcPath, relativePath, function (error, json) {
     process.stdout.write(JSON.stringify(json, null, 4) + '\n');
 });
