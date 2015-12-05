@@ -21,7 +21,7 @@ var getFile = function (path, callback) {
         content: null
     };
 
-    fs.readFile(path, { encoding: 'utf8' }, function (error, data) {
+    fs.readFile(path, null, function (error, data) {
         file.content = data;
 
         callback(error, file);
@@ -50,6 +50,7 @@ var applyTransform = function (file, callback) {
             callback(error, file);
         });
     } else {
+        file.content = file.content.toString();
         callback(null, file);
     }
 };

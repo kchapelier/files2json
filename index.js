@@ -15,4 +15,3 @@ module.exports = function (path, relativePath, callback) {
     options.relative = relativePath;
     workflow(path, options, callback);
 };
-

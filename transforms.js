@@ -9,14 +9,14 @@ var csvOptions = {
 var transforms = [
     {
         mimeTypes: ['application/json'],
-        operation: function (content, callback) {
-            callback(null, JSON.parse(content));
+        operation: function (buffer, callback) {
+            callback(null, JSON.parse(buffer.toString()));
         }
     },
     {
         mimeTypes: ['text/csv'],
-        operation: function (content, callback) {
-            csvParse(content, csvOptions, callback);
+        operation: function (buffer, callback) {
+            csvParse(buffer.toString(), csvOptions, callback);
         }
     }
 ];
